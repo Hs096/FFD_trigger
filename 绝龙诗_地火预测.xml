@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="71a33860-ce86-4feb-8ebc-4453d3004956" Name="绝龙诗" Enabled="true">
+    <Folders>
+      <Folder Id="e6f1aca3-b884-4650-bf56-3b8cda716c38" Name="下一次地火预测" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="计算xy坐标" Id="aea19475-153b-4434-bdf4-71678459edf3" RegularExpression="" Scheduling="FromRefirePeriod" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.xv1" VariableExpression="cos(${var:${lvar:地火first[1]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[1]}.xv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.xv2" VariableExpression="cos(${var:${lvar:地火first[1]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[1]}.xv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.xv3" VariableExpression="cos(${var:${lvar:地火first[1]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[1]}.xv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.yv1" VariableExpression="sin(${var:${lvar:地火first[1]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[1]}.yv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.yv2" VariableExpression="sin(${var:${lvar:地火first[1]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[1]}.yv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.yv3" VariableExpression="sin(${var:${lvar:地火first[1]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[1]}.yv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.xv1" VariableExpression="cos(${var:${lvar:地火first[2]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[2]}.xv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.xv2" VariableExpression="cos(${var:${lvar:地火first[2]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[2]}.xv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.xv3" VariableExpression="cos(${var:${lvar:地火first[2]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[2]}.xv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.yv1" VariableExpression="sin(${var:${lvar:地火first[2]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[2]}.yv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.yv2" VariableExpression="sin(${var:${lvar:地火first[2]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[2]}.yv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.yv3" VariableExpression="sin(${var:${lvar:地火first[2]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[2]}.yv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.xv1" VariableExpression="cos(${var:${lvar:地火first[3]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[3]}.xv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.xv2" VariableExpression="cos(${var:${lvar:地火first[3]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[3]}.xv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.xv3" VariableExpression="cos(${var:${lvar:地火first[3]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[3]}.xv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.yv1" VariableExpression="sin(${var:${lvar:地火first[3]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[3]}.yv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="17" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.yv2" VariableExpression="sin(${var:${lvar:地火first[3]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[3]}.yv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="18" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.yv3" VariableExpression="sin(${var:${lvar:地火first[3]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[3]}.yv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="19" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ed0355fa-5d4a-483e-b065-f1bbb99d1d70" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="地火触发" Id="319841e9-2266-492b-9deb-428dc2819dea" RegularExpression="^.{14} (?:\w+ )14:(?&lt;Fid&gt;4[0-9A-F]{7}):[^:]+?:6D9C:" Description="Hs">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="77cb2c45-e0c4-4d3d-b410-f4f0075b545e" TriggerForce="regexp,conditions" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.x" ListVariableExpression="${_ffxiventity[${Fid}].x}" ListVariableIndex="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.xv1" VariableExpression="${_ffxiventity[${Fid}].x}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.x" ListVariableExpression="${_ffxiventity[${Fid}].x}" ListVariableIndex="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.xv2" VariableExpression="${_ffxiventity[${Fid}].x}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.x" ListVariableExpression="${_ffxiventity[${Fid}].x}" ListVariableIndex="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.xv3" VariableExpression="${_ffxiventity[${Fid}].x}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.x" ListVariableExpression="${_ffxiventity[${Fid}].x}" ListVariableIndex="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.yv1" VariableExpression="${_ffxiventity[${Fid}].y}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.x" ListVariableExpression="${_ffxiventity[${Fid}].x}" ListVariableIndex="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.yv2" VariableExpression="${_ffxiventity[${Fid}].y}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Insert" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.x" ListVariableExpression="${_ffxiventity[${Fid}].x}" ListVariableIndex="1" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.yv3" VariableExpression="${_ffxiventity[${Fid}].y}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.xy" ListVariableExpression="${numeric:${_ffxiventity[${Fid}].heading}*(-180)/pi+90}" ListVariableIndex="3" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.地火角度v1" VariableExpression="${numeric:${_ffxiventity[${Fid}].heading}*(-180)/pi}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.xy" ListVariableExpression="${numeric:${_ffxiventity[${Fid}].heading}*(-180)/pi+90}" ListVariableIndex="3" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.地火角度v2" VariableExpression="${numeric:${_ffxiventity[${Fid}].heading}*(-180)/pi+90}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="${Fid}.xy" ListVariableExpression="${numeric:${_ffxiventity[${Fid}].heading}*(-180)/pi+90}" ListVariableIndex="3" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${Fid}.地火角度v3" VariableExpression="${numeric:${_ffxiventity[${Fid}].heading}*(-180)/pi+180}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="地火first" ListVariableExpression="${Fid}" ListVariableIndex="1" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" NamedCallbackName="command" NamedCallbackParam="/p 坐标:${_ffxiventity[${Fid}].x}，${_ffxiventity[${Fid}].y}   角度:${numeric:${_ffxiventity[${Fid}].heading}*(-180)/pi+90}" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${numeric:abs(${_ffxiventity[${id}].x}-100)}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="13" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="52d1e131-15ed-4792-870e-db0b03a2d96f" TriggerForce="regexp,conditions" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="aea19475-153b-4434-bdf4-71678459edf3" TriggerForce="regexp,conditions" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="5000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="地火变量重置" Id="77cb2c45-e0c4-4d3d-b410-f4f0075b545e" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" VariableOp="UnsetRegex" VariableName=".xv" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" VariableOp="UnsetRegex" VariableName=".yv" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" VariableOp="UnsetRegex" VariableName=".地火角度" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" VariableName="地火times" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ListVariableName="地火first" OBSEndPoint="" VariableName="地火times" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="计算xy坐标-first" Id="52d1e131-15ed-4792-870e-db0b03a2d96f" RegularExpression="" Scheduling="FromRefirePeriod" PeriodRefire="Deny" RefirePeriodExpression="1000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.xv1" VariableExpression="cos(${var:${lvar:地火first[1]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[1]}.xv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.xv2" VariableExpression="cos(${var:${lvar:地火first[1]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[1]}.xv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.xv3" VariableExpression="cos(${var:${lvar:地火first[1]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[1]}.xv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.yv1" VariableExpression="sin(${var:${lvar:地火first[1]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[1]}.yv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.yv2" VariableExpression="sin(${var:${lvar:地火first[1]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[1]}.yv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[1]}.yv3" VariableExpression="sin(${var:${lvar:地火first[1]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[1]}.yv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.xv1" VariableExpression="cos(${var:${lvar:地火first[2]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[2]}.xv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.xv2" VariableExpression="cos(${var:${lvar:地火first[2]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[2]}.xv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.xv3" VariableExpression="cos(${var:${lvar:地火first[2]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[2]}.xv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.yv1" VariableExpression="sin(${var:${lvar:地火first[2]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[2]}.yv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.yv2" VariableExpression="sin(${var:${lvar:地火first[2]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[2]}.yv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[2]}.yv3" VariableExpression="sin(${var:${lvar:地火first[2]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[2]}.yv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.xv1" VariableExpression="cos(${var:${lvar:地火first[3]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[3]}.xv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.xv2" VariableExpression="cos(${var:${lvar:地火first[3]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[3]}.xv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.xv3" VariableExpression="cos(${var:${lvar:地火first[3]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[3]}.xv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.yv1" VariableExpression="sin(${var:${lvar:地火first[3]}.地火角度v1}/360*2pi)*7+${var:${lvar:地火first[3]}.yv1}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="17" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.yv2" VariableExpression="sin(${var:${lvar:地火first[3]}.地火角度v2}/360*2pi)*7+${var:${lvar:地火first[3]}.yv2}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="18" ListVariableOp="Insert" OBSEndPoint="" VariableOp="SetNumeric" VariableName="${lvar:地火first[3]}.yv3" VariableExpression="sin(${var:${lvar:地火first[3]}.地火角度v3}/360*2pi)*7+${var:${lvar:地火first[3]}.yv3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="19" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="188bba2d-4e0c-49eb-92ef-a255b6b21c4d" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="循环画图" Id="188bba2d-4e0c-49eb-92ef-a255b6b21c4d" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="0" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[1]}.xv1},0,${var:${lvar:地火first[1]}.yv1}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[1]}.xv2},0,${var:${lvar:地火first[1]}.yv2}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[1]}.xv3},0,${var:${lvar:地火first[1]}.yv3}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[2]}.xv1},0,${var:${lvar:地火first[2]}.yv1}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[2]}.xv2},0,${var:${lvar:地火first[2]}.yv2}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[2]}.xv3},0,${var:${lvar:地火first[2]}.yv3}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[3]}.xv1},0,${var:${lvar:地火first[3]}.yv1}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[3]}.xv2},0,${var:${lvar:地火first[3]}.yv2}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="8" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[3]}.xv3},0,${var:${lvar:地火first[3]}.yv3}],&quot;duration&quot;:3}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="9" OBSEndPoint="" VariableOp="SetNumeric" VariableName="地火times" VariableExpression="${var:地火times}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="aea19475-153b-4434-bdf4-71678459edf3" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1700">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:地火times}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="画图first" Id="d89e2efd-fe6f-428c-85cc-b45d43de74b8" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[1]}.xv1},0,${var:${lvar:地火first[1]}.yv1}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[1]}.xv2},0,${var:${lvar:地火first[1]}.yv2}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[1]}.xv3},0,${var:${lvar:地火first[1]}.yv3}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[2]}.xv1},0,${var:${lvar:地火first[2]}.yv1}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[2]}.xv2},0,${var:${lvar:地火first[2]}.yv2}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[2]}.xv3},0,${var:${lvar:地火first[2]}.yv3}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[3]}.xv1},0,${var:${lvar:地火first[3]}.yv1}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="8" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[3]}.xv2},0,${var:${lvar:地火first[3]}.yv2}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6.05},&quot;pos&quot;:[${var:${lvar:地火first[3]}.xv3},0,${var:${lvar:地火first[3]}.yv3}],&quot;duration&quot;:7}" UseTTSTextExpression="分摊,钢铁,月环" UseTTSRateExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And" />
+              </Action>
+              <Action OrderNumber="10" OBSEndPoint="" VariableOp="SetNumeric" VariableName="地火times" VariableExpression="${var:地火times}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="aea19475-153b-4434-bdf4-71678459edf3" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5700">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:地火times}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>

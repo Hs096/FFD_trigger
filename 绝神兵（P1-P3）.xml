@@ -7,7 +7,7 @@
           <Folder Id="f8d13fe6-73a7-45f5-b7e8-0d62be3f5538" Name="风枪" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Name="寒风之歌2" Id="89cbeb2a-117e-48b3-9521-f9f2becde9c3" RegularExpression="^.{14} (?:\w+ )1B:(?&lt;id&gt;.{8}):(?&lt;Name&gt;[^:]+):0000:.*:0010:0000:0000:0000">
+              <Trigger Enabled="true" Name="寒风之歌2" Id="89cbeb2a-117e-48b3-9521-f9f2becde9c3" RegularExpression="^.{14} (?:\w+ )1B:(?&lt;id&gt;.{8}):(?&lt;Name&gt;[^:]+):0000:.*:0010:0000:0000:0000">
                 <Actions>
                   <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;rect&quot;,&quot;width&quot;:10,&quot;range&quot;:{&quot;key&quot;:&quot;actor_distance&quot;,&quot;a1&quot;:${numeric:hex2dec(${id})},&quot;a2&quot;:${var:风神id}}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${var:风神id}},&quot;facing&quot;:{&quot;key&quot;:&quot;actor_relative_facing&quot;,&quot;src&quot;:${var:风神id},&quot;dst&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:10}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                     <Condition Enabled="false" Grouping="Or" />
@@ -24,8 +24,15 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="false" Name="转换" Id="78b056a1-f7be-47a5-bca4-07fceae7ed55" RegularExpression="">
-                <Actions />
+              <Trigger Enabled="true" Name="转换" Id="78b056a1-f7be-47a5-bca4-07fceae7ed55" RegularExpression="^.{14} (?:\w+ )03:(?&lt;zid&gt;.{8}):(妙翅|美翼):">
+                <Actions>
+                  <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="5071a767-fd2a-46eb-a3c4-d053f8f813d1" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="89cbeb2a-117e-48b3-9521-f9f2becde9c3" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
               <Trigger Enabled="false" Name="寒风之歌1" Id="5071a767-fd2a-46eb-a3c4-d053f8f813d1" RegularExpression="^.{14} (?:\w+ )1B:(?&lt;id&gt;.{8}):(?&lt;Name&gt;[^:]+):0000:.*:0010:0000:0000:0000">
@@ -101,7 +108,7 @@
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="刺羽风圈范围移除" Id="b3d8aaa1-d559-4905-8e74-6445d348afc2" RegularExpression="^.{14} (?:\w+ )04:(?&lt;id&gt;.{8}):刺羽">
+          <Trigger Enabled="true" Name="刺羽风圈范围移除" Id="b3d8aaa1-d559-4905-8e74-6445d348afc2" RegularExpression="^.{14} (?:\w+ )14:.{8}:[^:]*:2B46:[^:]*:">
             <Actions>
               <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;destroy_omen&quot;,&quot;id&quot;:-1}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                 <Condition Enabled="false" Grouping="Or" />
@@ -119,7 +126,7 @@
           </Trigger>
           <Trigger Enabled="true" Name="烈风刃" Id="190671b9-af3b-4581-9503-fe1469452990" RegularExpression="^.{14} (?:\w+ )14:.{8}:[^:]*:2B48:[^:]*:(?&lt;id&gt;.{8}):[^:]*:">
             <Actions>
-              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;friend&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:3},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:2.5}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;friend&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:5},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:2.5}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -214,37 +221,37 @@
                   <ConditionSingle Enabled="true" ExpressionL="${sc}" ExpressionTypeL="String" ExpressionR="30.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="6000">
+              <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson" ExecutionDelayExpression="6000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="6000">
+              <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson" ExecutionDelayExpression="6000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="6000">
+              <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson" ExecutionDelayExpression="6000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${sc}" ExpressionTypeL="String" ExpressionR="30.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="6000">
+              <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[4,{&quot;key&quot;:&quot;add&quot;,&quot;values&quot;:[6,{&quot;key&quot;:&quot;mul&quot;,&quot;values&quot;:[{&quot;key&quot;:&quot;remain&quot;},-1]}]}]}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson" ExecutionDelayExpression="6000">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${sc}" ExpressionTypeL="String" ExpressionR="30.00" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" NamedCallbackName="command" NamedCallbackParam="/e ${numeric:hex2dec(${id})}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+              <Action OrderNumber="8" NamedCallbackName="command" NamedCallbackParam="/e ${numeric:hex2dec(${id})}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Name="地火引导（暂定r6）" Id="55c92f2b-6b1d-4a36-a554-88cb47a2c648" RegularExpression="^.{14} (?:\w+ )1A:62A:[^:]*:(?&lt;sc&gt;.[^:]*):.{8}:[^:]*:(?&lt;id&gt;.{8}):[^:]*">
+          <Trigger Enabled="true" Name="地火引导" Id="55c92f2b-6b1d-4a36-a554-88cb47a2c648" RegularExpression="^.{14} (?:\w+ )03:(?&lt;id&gt;.{8}):火狱之楔" PeriodRefire="Deny" RefirePeriodExpression="1000">
             <Actions>
-              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:${var:火神id},&quot;idx&quot;:-1}},&quot;duration&quot;:15}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:8},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:${var:火神id},&quot;idx&quot;:{&quot;key&quot;:&quot;if&quot;,&quot;cond&quot;:{&quot;key&quot;:&quot;actor_has_status&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:${var:火神id},&quot;idx&quot;:-1},&quot;status_id&quot;:1578},&quot;false&quot;:-1,&quot;true&quot;:-3}}},&quot;duration&quot;:12}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:6},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:${var:火神id},&quot;idx&quot;:-2}},&quot;duration&quot;:15}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:8},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:${var:火神id},&quot;idx&quot;:{&quot;key&quot;:&quot;if&quot;,&quot;cond&quot;:{&quot;key&quot;:&quot;actor_has_status&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:${var:火神id},&quot;idx&quot;:-2},&quot;status_id&quot;:1578},&quot;false&quot;:-2,&quot;true&quot;:-3}}},&quot;duration&quot;:12}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -256,6 +263,21 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e ${numeric:hex2dec(${id})} ,,${id}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="地火引导test" Id="fe187f95-61b0-4c09-97cf-b2df8db73f10" RegularExpression="^.{14} (?:\w+ )1A:62A:[^:]*:(?&lt;sc&gt;.[^:]*):.{8}:[^:]*:(?&lt;id&gt;.{8}):[^:]*">
+            <Actions>
+              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;g_enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:8},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:1073825145,&quot;idx&quot;:0},&quot;duration&quot;:0}}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;friend&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:8},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:1073825145,&quot;idx&quot;:{&quot;key&quot;:&quot;if&quot;,&quot;cond&quot;:{&quot;key&quot;:&quot;actor_has_status&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:1073825145,&quot;idx&quot;:-2},&quot;status_id&quot;:18241},&quot;true&quot;:-3,&quot;false&quot;:-2}}},&quot;duration&quot;:0}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;friend&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;circle&quot;,&quot;range&quot;:8},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:1073825145,&quot;idx&quot;:{&quot;key&quot;:&quot;if&quot;,&quot;cond&quot;:{&quot;key&quot;:&quot;actor_has_status&quot;,&quot;id&quot;:{&quot;key&quot;:&quot;player_by_distance_idx&quot;,&quot;src&quot;:1073825145,&quot;idx&quot;:-1},&quot;status_id&quot;:1578},&quot;false&quot;:-1,&quot;true&quot;:-3}}},&quot;duration&quot;:0}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -283,7 +305,13 @@
           <Action OrderNumber="5" VariableName="火神id" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="EndEncounter" ExecutionDelayExpression="3000">
+          <Action OrderNumber="6" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="5071a767-fd2a-46eb-a3c4-d053f8f813d1" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="89cbeb2a-117e-48b3-9521-f9f2becde9c3" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="EndEncounter" ExecutionDelayExpression="3000">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>

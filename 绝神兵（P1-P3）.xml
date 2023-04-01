@@ -11,7 +11,7 @@
                 <Actions>
                   <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8001/rpc" JsonPayloadExpression="{&quot;cmd&quot;:&quot;add_omen&quot;,&quot;color&quot;:&quot;enemy&quot;,&quot;shape_scale&quot;:{&quot;key&quot;:&quot;rect&quot;,&quot;width&quot;:6,&quot;range&quot;:{&quot;key&quot;:&quot;actor_distance&quot;,&quot;a1&quot;:${numeric:hex2dec(${id})},&quot;a2&quot;:${var:风神id}}},&quot;pos&quot;:{&quot;key&quot;:&quot;actor_pos&quot;,&quot;id&quot;:${var:风神id}},&quot;facing&quot;:{&quot;key&quot;:&quot;actor_relative_facing&quot;,&quot;src&quot;:${var:风神id},&quot;dst&quot;:${numeric:hex2dec(${id})}},&quot;duration&quot;:6}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:P1_风枪}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:p1_风枪}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                     </Condition>
                   </Action>
                   <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetNumeric" VariableName="p1_风枪" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="2000">
@@ -235,7 +235,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -270,7 +269,6 @@
       <Trigger Enabled="true" Name="触发器更新地址:https://github.com/Hs096/FFD_trigger" Id="11ef870f-cce7-41bf-a658-f3dd9d474e0f" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
